@@ -234,7 +234,7 @@ end
 %Create new file if one does not already exist for the patient
 
 c = clock;
-STRYEAR = num2str(c(1));
+STRYEAR = num2str(c(1)); STRYEAR = STRYEAR(end-1:end);
 
 val=get(handles.procedure,'Value');
 switch val
@@ -379,7 +379,7 @@ end
 
 %Create new file if one does not already exist for patient
 c = clock;
-STRYEAR = num2str(c(1));
+STRYEAR = num2str(c(1)); STRYEAR = STRYEAR(end-1:end);
 
 val=get(handles.procedure,'Value');
 switch val
@@ -582,7 +582,7 @@ end
 
 %Create new file if one does not already exist for patientID
 c = clock;
-STRYEAR = num2str(c(1));
+STRYEAR = num2str(c(1)); STRYEAR = STRYEAR(end-1:end);
 
 val=get(handles.procedure,'Value');
 switch val
