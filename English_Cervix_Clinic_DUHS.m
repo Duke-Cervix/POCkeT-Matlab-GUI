@@ -324,7 +324,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid);
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'White_PCGen2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'White_PC_Alpha2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 
 % 
@@ -468,7 +468,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Green_PCGen2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Green_PC_Alpha2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
  
  %imshow(im);
@@ -669,7 +669,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Lugols_PCGen2_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Lugols_PC_Alpha2_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 %toc
 %imshow(im);
