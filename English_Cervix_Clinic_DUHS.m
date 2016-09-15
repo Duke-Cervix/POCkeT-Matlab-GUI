@@ -48,8 +48,8 @@ end
 global key_directories;
 key_directories = {};
 
-key_directories(1) = {'C:\Users\Cervix 9\Dropbox\CervixLaptop9\DO_NOT_TOUCH\'};
-key_directories(2) = {'C:\Users\Cervix 9\Dropbox\CervixLaptop9\'};
+key_directories(1) = {'E:\Dropbox\Images from DUHS\DO_NOT_TOUCH\'};
+key_directories(2) = {'E:\Dropbox\Images from DUHS\'};
 
 % Change this number to specify how many images are captured each time you
 % press one of the image capture buttons
@@ -234,7 +234,7 @@ end
 %Create new file if one does not already exist for the patient
 
 c = clock;
-STRYEAR = num2str(c(1));
+STRYEAR = num2str(c(1)); STRYEAR = STRYEAR(end-1:end);
 
 val=get(handles.procedure,'Value');
 switch val
@@ -244,15 +244,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'Ganjoni-L0%1.0f-';
+        type1 = 'DUHS-L0%1.0f-';
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'Ganjoni-C0%1.0f-';
+        type2= 'DUHS-C0%1.0f-';
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'Ganjoni-T0%1.0f-';
+        type3= 'DUHS-T0%1.0f-';
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -303,7 +303,7 @@ switch val
         patientType='L';%leep
 %               
     case 3
-        patientType='C';%colpscopy
+        patientType='C';%colposcopy
 %          
     case 4
         patientType='T';%test
@@ -324,7 +324,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid);
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'White_PCGen2_AA_WD_35mm_Ganjoni-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'White_PC_Alpha2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 
 % 
@@ -379,7 +379,7 @@ end
 
 %Create new file if one does not already exist for patient
 c = clock;
-STRYEAR = num2str(c(1));
+STRYEAR = num2str(c(1)); STRYEAR = STRYEAR(end-1:end);
 
 val=get(handles.procedure,'Value');
 switch val
@@ -389,15 +389,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'Ganjoni-L0%1.0f-';
+        type1 = 'DUHS-L0%1.0f-';
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'Ganjoni-C0%1.0f-';
+        type2= 'DUHS-C0%1.0f-';
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'Ganjoni-T0%1.0f-';
+        type3= 'DUHS-T0%1.0f-';
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -468,7 +468,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Green_PCGen2_AA_WD_35mm_Ganjoni-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Green_PC_Alpha2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
  
  %imshow(im);
@@ -582,7 +582,7 @@ end
 
 %Create new file if one does not already exist for patientID
 c = clock;
-STRYEAR = num2str(c(1));
+STRYEAR = num2str(c(1)); STRYEAR = STRYEAR(end-1:end);
 
 val=get(handles.procedure,'Value');
 switch val
@@ -592,15 +592,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'Ganjoni-L0%1.0f-';
+        type1 = 'DUHS-L0%1.0f-';
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'Ganjoni-C0%1.0f-';
+        type2= 'DUHS-C0%1.0f-';
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'Ganjoni-T0%1.0f-';
+        type3= 'DUHS-T0%1.0f-';
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -669,7 +669,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Lugols_PCGen2_WD_35mm_Ganjoni-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Lugols_PC_Alpha2_LI_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 %toc
 %imshow(im);
