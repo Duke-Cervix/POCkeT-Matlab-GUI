@@ -43,7 +43,7 @@ else
 end
 % End initialization code - DO NOT EDIT
 
-
+%% Global Variables
 %Change these to define storage paths for code (1) and images (2).
 global key_directories;
 key_directories = {};
@@ -55,6 +55,10 @@ key_directories(2) = {'E:\Dropbox\Images from DUHS\'};
 % press one of the image capture buttons
 global images_per_click;
 images_per_click = 10;
+
+% Change this variable to match the site where images are being collected
+global study_site;
+study_site = 'DUHS';
 
 % --- Executes just before English_Cervix_Clinic_Ganjoni is made visible.
 function English_Cervix_Clinic_DUHS_OpeningFcn(hObject, eventdata, handles, varargin)
@@ -207,6 +211,7 @@ function whitelight_Callback(hObject, eventdata, handles)
 
 global key_directories;
 global images_per_click;
+global study_site;
 global numTimesPressed first;
 
 %increase global variable
@@ -244,15 +249,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'DUHS-L0%1.0f-';
+        type1 = strcat(study_site,'-L0%1.0f-');
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'DUHS-C0%1.0f-';
+        type2 = strcat(study_site,'-C0%1.0f-');
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'DUHS-T0%1.0f-';
+        type3 = strcat(study_site,'-T0%1.0f-');
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -324,7 +329,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid);
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'White_PC_Alpha2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'White_PC_Alpha2_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 
 % 
@@ -354,6 +359,7 @@ function greenlight_Callback(hObject, eventdata, handles)
 
 global key_directories;
 global images_per_click;
+global study_site;
 global numTimesPressed first;
 
 %increase global variable
@@ -389,15 +395,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'DUHS-L0%1.0f-';
+        type1 = strcat(study_site,'-L0%1.0f-');
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'DUHS-C0%1.0f-';
+        type2 = strcat(study_site,'-C0%1.0f-');
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'DUHS-T0%1.0f-';
+        type3 = strcat(study_site,'-T0%1.0f-');
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -468,7 +474,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Green_PC_Alpha2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Green_PC_Alpha2_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
  
  %imshow(im);
@@ -560,6 +566,7 @@ function Lugols_Callback(hObject, eventdata, handles)
 
 global key_directories;
 global images_per_click;
+global study_site;
 global numTimesPressed first;
 %Make sure a PatientID is typed in and formatted correctly.
 SID = get(handles.patientID,'String');
@@ -592,17 +599,17 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'DUHS-L0%1.0f-';
+        type1 = strcat(study_site,'-L0%1.0f-');
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'DUHS-C0%1.0f-';
+        type2 = strcat(study_site,'-C0%1.0f-');
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'DUHS-T0%1.0f-';
+        type3 = strcat(study_site,'-T0%1.0f-');
         type3 = strcat(type3, STRYEAR);
-        Filename=sprintf(type3,ID);    
+        Filename=sprintf(type3,ID);   
 end
 
 
@@ -668,8 +675,8 @@ for i = 1:images_per_click
     %set(src, 'Exposure', -4);
     im = getsnapshot(vid); 
     axes(handles.image)
-    %imshow(im); 
-    imwrite(im,[num2str(counter),'Lugols_PC_Alpha2_LI_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    %imshow(im);
+    imwrite(im,[num2str(counter),'Lugols_PC_Alpha2_LI_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 %toc
 %imshow(im);
