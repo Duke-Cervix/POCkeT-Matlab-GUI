@@ -244,15 +244,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'Ganjoni-L0%1.0f-';
+        type1 = 'DUHS-L0%1.0f-';
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'Ganjoni-C0%1.0f-';
+        type2= 'DUHS-C0%1.0f-';
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'Ganjoni-T0%1.0f-';
+        type3= 'DUHS-T0%1.0f-';
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -303,7 +303,7 @@ switch val
         patientType='L';%leep
 %               
     case 3
-        patientType='C';%colpscopy
+        patientType='C';%colposcopy
 %          
     case 4
         patientType='T';%test
@@ -324,7 +324,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid);
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'White_PCGen2_AA_WD_35mm_Ganjoni-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'White_PCGen2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 
 % 
@@ -389,15 +389,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'Ganjoni-L0%1.0f-';
+        type1 = 'DUHS-L0%1.0f-';
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'Ganjoni-C0%1.0f-';
+        type2= 'DUHS-C0%1.0f-';
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'Ganjoni-T0%1.0f-';
+        type3= 'DUHS-T0%1.0f-';
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -468,7 +468,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Green_PCGen2_AA_WD_35mm_Ganjoni-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Green_PCGen2_AA_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
  
  %imshow(im);
@@ -592,15 +592,15 @@ switch val
          uiwait(warndlg(warningMessage));
          return; % Get out and don't process any further.
     case 2
-        type1 = 'Ganjoni-L0%1.0f-';
+        type1 = 'DUHS-L0%1.0f-';
         type1 = strcat(type1, STRYEAR);
         Filename=sprintf(type1,ID);
     case 3
-        type2= 'Ganjoni-C0%1.0f-';
+        type2= 'DUHS-C0%1.0f-';
         type2 = strcat(type2, STRYEAR);
         Filename=sprintf(type2,ID);
     case 4
-        type3= 'Ganjoni-T0%1.0f-';
+        type3= 'DUHS-T0%1.0f-';
         type3 = strcat(type3, STRYEAR);
         Filename=sprintf(type3,ID);    
 end
@@ -669,7 +669,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Lugols_PCGen2_WD_35mm_Ganjoni-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Lugols_PCGen2_WD_35mm_DUHS-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 %toc
 %imshow(im);
