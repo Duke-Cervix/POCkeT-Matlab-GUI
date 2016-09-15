@@ -48,8 +48,8 @@ end
 global key_directories;
 key_directories = {};
 
-key_directories(1) = {'C:\Users\Cervix 9\Dropbox\CervixLaptop9\DO_NOT_TOUCH\'};
-key_directories(2) = {'C:\Users\Cervix 9\Dropbox\CervixLaptop9\'};
+key_directories(1) = {'E:\Dropbox\Images from DUHS\DO_NOT_TOUCH\'};
+key_directories(2) = {'E:\Dropbox\Images from DUHS\'};
 
 % Change this number to specify how many images are captured each time you
 % press one of the image capture buttons
