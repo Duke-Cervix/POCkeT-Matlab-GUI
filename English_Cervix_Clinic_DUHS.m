@@ -48,17 +48,17 @@ end
 global key_directories;
 key_directories = {};
 
-key_directories(1) = {'E:\Dropbox\Images from DUHS\DO_NOT_TOUCH\'};
-key_directories(2) = {'E:\Dropbox\Images from DUHS\'};
+key_directories(1) = {'E:\Cervix Imaging - Cervix 1 Local\'};
+key_directories(2) = {'E:\Cervix Imaging - Cervix 1 Local\'};
 
 % Change this number to specify how many images are captured each time you
 % press one of the image capture buttons
 global images_per_click;
-images_per_click = 10;
+images_per_click = 3;
 
 % Change this variable to match the site where images are being collected
 global study_site;
-study_site = 'DUHS';
+study_site = 'LIGA';
 
 % --- Executes just before English_Cervix_Clinic_Ganjoni is made visible.
 function English_Cervix_Clinic_DUHS_OpeningFcn(hObject, eventdata, handles, varargin)
@@ -329,7 +329,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid);
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'White_PC_Alpha2_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'White_PC_Gen4_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 
 % 
@@ -474,7 +474,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Green_PC_Alpha2_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Green_PC_Gen4_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
  
  %imshow(im);
@@ -676,7 +676,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im);
-    imwrite(im,[num2str(counter),'Lugols_PC_Alpha2_LI_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Lugols_PC_Gen4_LI_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 %toc
 %imshow(im);
