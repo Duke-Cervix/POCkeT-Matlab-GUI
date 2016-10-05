@@ -48,17 +48,17 @@ end
 global key_directories;
 key_directories = {};
 
-key_directories(1) = {'E:\Dropbox\Images from DUHS\DO_NOT_TOUCH\'};
-key_directories(2) = {'E:\Dropbox\Images from DUHS\'};
+key_directories(1) = {'C:\Users\Cervix Laptop 7\Dropbox\Images from Kenyatta\DO_NOT_TOUCH\'};
+key_directories(2) = {'C:\Users\Cervix Laptop 7\Dropbox\Images from Kenyatta\'};
 
 % Change this number to specify how many images are captured each time you
 % press one of the image capture buttons
 global images_per_click;
-images_per_click = 10;
+images_per_click = 3;
 
 % Change this variable to match the site where images are being collected
 global study_site;
-study_site = 'DUHS';
+study_site = 'Kenyatta';
 
 % --- Executes just before English_Cervix_Clinic_Ganjoni is made visible.
 function English_Cervix_Clinic_DUHS_OpeningFcn(hObject, eventdata, handles, varargin)
