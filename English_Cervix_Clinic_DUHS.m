@@ -48,8 +48,8 @@ end
 global key_directories;
 key_directories = {};
 
-key_directories(1) = {'E:\Cervix Imaging - Cervix 1 Local\'};
-key_directories(2) = {'E:\Cervix Imaging - Cervix 1 Local\'};
+key_directories(1) = {'C:\Users\Cervix 9\Dropbox\Images from La Liga Peru\DO_NOT_TOUCH\'};
+key_directories(2) = {'C:\Users\Cervix 9\Dropbox\Images from La Liga Peru\'};
 
 % Change this number to specify how many images are captured each time you
 % press one of the image capture buttons
@@ -568,6 +568,10 @@ global key_directories;
 global images_per_click;
 global study_site;
 global numTimesPressed first;
+
+%increase global variable
+numTimesPressed = numTimesPressed + 1;
+
 %Make sure a PatientID is typed in and formatted correctly.
 SID = get(handles.patientID,'String');
 TF = isempty(SID);
