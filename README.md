@@ -15,8 +15,7 @@ All versions of Matlab GUI code for all Laptops/clinic sites
 5. Change line 61 in the .m file to set the study site name. This will change the names of the image files and the names of the
    folders where the image files are saved.
    
-### Optional additional steps ###
-Follow the steps below to add a desktop shortcut for the software.
+Optional additional steps
 
 6. Right click the windows batch file (located with all of the other code files from step 2) and select "Create Shortcut". Cut and
    paste the shortcut from your code folder to the desktop.
