@@ -9,7 +9,7 @@ All versions of Matlab GUI code for all Laptops/clinic sites
 
 3. Extract the files to the folder of your choosing on your pc. It is recommended that you store the code files in a folder          which is itself stored within the folder where you intend to store your image folders. Refer to lines 51 and 52 in the .m          file for an example of this.
 
-4. Change lines 51 and 52 in the .m file according to where you just stored the files in step 3.
+4. Change lines 51 and 52 in the .m file according to where you just stored the files in step 3. Make sure to include a            backslash at the end of the paths, and surround the paths in single quotation marks.
 
 5. Change line 57 in the .m file to set the number of images you want to capture with a single click of the image capture            button.
 
