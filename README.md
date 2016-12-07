@@ -18,7 +18,7 @@ All versions of Matlab GUI code for all Laptops/clinic sites
    
 ### Optional additional steps ###
 
-6. Right click the windows batch file (located with all of the other code files from step 3) above and select "Create Shortcut".      Cut and paste the new shortcut to the desktop.
+6. Right click the windows batch file (located with all of the other code files from step 3 above) and select "Create Shortcut".      Cut and paste the new shortcut to the desktop.
    
 7. Right click the shortcut on the desktop and select, "Properties". 
 
