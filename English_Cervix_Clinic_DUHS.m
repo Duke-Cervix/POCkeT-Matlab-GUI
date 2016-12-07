@@ -329,7 +329,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid);
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'White_PC_Alpha2_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'White_PC_Gen4_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 
 % 
@@ -474,7 +474,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im); 
-    imwrite(im,[num2str(counter),'Green_PC_Alpha2_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Green_PC_Gen4_AA_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
  
  %imshow(im);
@@ -568,6 +568,10 @@ global key_directories;
 global images_per_click;
 global study_site;
 global numTimesPressed first;
+
+%increase global variable
+numTimesPressed = numTimesPressed + 1;
+
 %Make sure a PatientID is typed in and formatted correctly.
 SID = get(handles.patientID,'String');
 TF = isempty(SID);
@@ -676,7 +680,7 @@ for i = 1:images_per_click
     im = getsnapshot(vid); 
     axes(handles.image)
     %imshow(im);
-    imwrite(im,[num2str(counter),'Lugols_PC_Alpha2_LI_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
+    imwrite(im,[num2str(counter),'Lugols_PC_Gen4_LI_WD_35mm_',study_site,'-',patientType,'0',num2str(patientID),'-',num2str(i),'noComp300dpi','.tif'],'Compression','none','Resolution',300);
 end
 %toc
 %imshow(im);
