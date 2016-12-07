@@ -15,18 +15,17 @@ All versions of Matlab GUI code for all Laptops/clinic sites
 5. Change line 61 in the .m file to set the study site name. This will change the names of the image files and the names of the
    folders where the image files are saved.
    
-Optional additional steps
+### Optional additional steps ###
 
-6. Right click the windows batch file (located with all of the other code files from step 2) and select "Create Shortcut". Cut and
-   paste the shortcut from your code folder to the desktop.
+6. Right click the windows batch file (located with all of the other code files from step 2) above and select "Create Shortcut".      Cut and paste the shortcut from your code folder to the desktop.
    
 7. Right click the shortcut on the desktop and select, "Properties". 
 
-8. Change the "Target" line to the full path name of the batch file
-   location, including the name of the batch file and file extension. Make sure to surround the full path in quotation marks. See
-   example below.
+8. Navigate to the the "Shortcut" tab. Change the "Target" line to the full path name of the batch file location, including the      name of the batch file and file extension. Make sure to surround the full path in quotation marks. See example below.
    (e.g. "E:\Dropbox\Images from DUHS\DO_NOT_TOUCH\English_Cervix_GUI.bat")
    
 9. Change the "Start in" line to the folder where the windows batch file is stored. This should be the same as the file path from
-   step 8 minus the file name and final backslash. Make sure to surround the full path in quotation marks. See example below.
+   the previous step minus the file name and final backslash. Make sure to surround the full path in quotation marks. See example    below.
    (e.g. "E:\Dropbox\Images from DUHS\DO_NOT_TOUCH")
+
+10. Click "Apply". Click "OK".
