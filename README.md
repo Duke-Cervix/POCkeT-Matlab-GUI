@@ -2,7 +2,6 @@
 All versions of Matlab GUI code for all Laptops/clinic sites
 
 ### Guide for setting up Matlab code on any PC ###
-Follow these steps to create a desktop shortcut for the MATLAB GUI.
 
 1. Navigate to the master branch. To do this, click the "branch" button on the left hand side of the screen. A drop down menu        will appear. Select "master".
 
@@ -18,6 +17,7 @@ Follow these steps to create a desktop shortcut for the MATLAB GUI.
    image folders
    
 ### Optional additional steps ###
+Follow these steps to create a desktop shortcut for the MATLAB GUI.
 
 6. Right click the windows batch file (located with all of the other code files from step 3 above) and select "Create Shortcut".      Cut and paste the new shortcut to the desktop.
    
