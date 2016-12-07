@@ -3,16 +3,18 @@ All versions of Matlab GUI code for all Laptops/clinic sites
 
 ### Guide for setting up Matlab code on any PC ###
 
-1. Download all files from "master" branch.
+1. Navigate to the master branch. To do this, click the "branch" button on the left hand side of the screen. A drop down menu will    appear. Select "master".
 
-2. Store files in folder of your choosing on your pc. It is recommended that you store the code in a folder which is itself stored
+2. Click the "Download or Clone" button on the right side of the screen. A drop down menu will appear. Select "Download .zip          file".
+
+3. Store files in folder of your choosing on your pc. It is recommended that you store the code in a folder which is itself stored
    within the folder where you intend to store your image folders. Refer to lines 51 and 52 in the .m file for an example of this.
 
-3. Change lines 51 and 52 in the .m file according to where you just stored the files in step 2.
+4. Change lines 51 and 52 in the .m file according to where you just stored the files in step 2.
 
-4. Change line 57 in the .m file to set the number of images you want to capture with a single click of the image capture button.
+5. Change line 57 in the .m file to set the number of images you want to capture with a single click of the image capture button.
 
-5. Change line 61 in the .m file to set the study site name. This will change the names of the image files and the names of the
+6. Change line 61 in the .m file to set the study site name. This will change the names of the image files and the names of the
    folders where the image files are saved.
    
 ### Optional additional steps ###
